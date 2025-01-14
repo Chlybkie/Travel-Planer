@@ -5,4 +5,31 @@
     <groupId>com.example</groupId>
     <artifactId>travel-planner</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <!-- JavaFX dependencies -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>22.0.2</version> <!-- Dostosuj wersję -->
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>22.0.2</version> <!-- Dostosuj wersję -->
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>com.example.Main</mainClass> <!-- Zmień na Twoją klasę główną -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -17,19 +17,21 @@ public class TripStop {
             this.visitDate = temp;
         }
         else {
-            System.out.println("Enter proper trip details: ");
+            System.out.println(("Invalid trip details provided. Ensure fields are not blank and date is in the future."));
         }
 
     }
 
     @Override
     public String toString() {
-        return "Destination: " + name + ", description: " + description + ", address: " + address + " , visit date: " + DateTimeFormatter.ofLocalizedDate();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        return "Destination: " + name + ", description: " + description + ", address: " + address + " , visit date: " + visitDate.format(formatter);
     }
 
-    public void setVisitDate(LocalDate visitDate) throws DateTimeException {
+    public void setVisitDate(int day, int month, int year) throws DateTimeException {
+        LocalDate visitDate = LocalDate.of(year, month, day);
         if (visitDate.isBefore(LocalDate.now())){
-            System.out.println("Please enter a valid date: ");
+            System.out.println("Visit date cannot be in the past.");
         }
         else {
             this.visitDate = visitDate;

@@ -1,12 +1,5 @@
 package com.example;
 
-import java.time.LocalDate;
-import java.util.Scanner;
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,10 +8,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Main extends Application{
+public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage stage) throws IOException {
+        // Załaduj FXML
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/main.fxml"));
         AnchorPane root = fxmlLoader.load();
 
@@ -29,9 +23,6 @@ public class Main extends Application{
     }
 
     public static void main(String[] args) {
-        launch();
-
-
-
+        launch(args);
     }
 }

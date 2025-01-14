@@ -1,3 +1,5 @@
+package com.example;
+
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -10,7 +12,7 @@ public class TripStop {
 
     public TripStop(String name, String description, String address, int day, int month, int year) throws IllegalArgumentException{
         LocalDate temp = LocalDate.of(year, month,day);
-        if ( !name.isBlank() && !description.isBlank() && !address.isBlank() && temp.isAfter(LocalDate.now())) {
+        if ( !name.isEmpty() && !description.isEmpty() && !address.isEmpty() && temp.isAfter(LocalDate.now())) {
             this.name = name;
             this.description = description;
             this.address = address;

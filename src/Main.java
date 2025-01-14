@@ -1,7 +1,18 @@
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        TripStop trip = new TripStop("sdf ", " sdf", " sdf", 31, 12, 2025);
+
+        while (true){
+            try{
+
+
+
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+        }
     }
 }

@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 public class TravelPlaner extends JFrame{
     private JPanel contentPane;
     private JButton hiButton;
-    private SomeButtonListener someButtonListener;
 
     public TravelPlaner(){
 
@@ -14,12 +13,12 @@ public class TravelPlaner extends JFrame{
         setContentPane(contentPane);
         setLocationRelativeTo(null);
         setSize(500,500);
-        hiButton.addActionListener(new ActionListener() {
+        /*hiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("I was clicked!");
             }
-        });
+        });*/
 
         setVisible(true);
 
